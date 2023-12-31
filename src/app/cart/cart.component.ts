@@ -15,7 +15,15 @@ export class CartComponent {
   cartItems = this.cartService.getCartItems();
 
   removeItem(id: number) {
-    this.cartService.removeItem(id)
+    this.cartService.removeItem(id);
   }
 
+  addQuantity(id: number) {
+    this.cartService.addQuantity(id)
+  }
+
+  decreaseQuantity(id: number) {
+    this.cartService.decreaseQuantity(id)
+  }
 }
+

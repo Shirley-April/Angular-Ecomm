@@ -7,9 +7,9 @@
   </div>
 
   <div class="quantity">
-    <div>-</div>
+    <div (click)="decreaseQuantity(item.id)">-</div>
     <div>{{ item.quantity }}</div>
-    <div>+</div>
+    <div (click)="addQuantity(item.id)">+</div>
 
   </div>
 

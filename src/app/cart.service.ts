@@ -31,4 +31,24 @@ export class CartService {
       this.items.splice(index, 1);
     }
   }
+
+  addQuantity(id: number) {
+    const item = this.items.find((item) => item.id === id);
+
+    if (item) {
+      if (item.quantity) {
+        item.quantity += 1;
+      }
+    }
+  }
+
+  decreaseQuantity(id: number) {
+    const item = this.items.find((item) => item.id === id);
+
+    if (item) {
+      if (item.quantity) {
+        item.quantity = item.quantity === 1 ? 1 : item.quantity -= 1;
+      }
+    }
+  }
 }
