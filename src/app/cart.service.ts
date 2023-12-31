@@ -24,4 +24,11 @@ export class CartService {
       this.items.push({ ...product, quantity: 1 });
     }
   }
+
+  removeItem(id: number) {
+    const index = this.items.findIndex((item) => item.id === id);
+    if (index > -1) {
+      this.items.splice(index, 1);
+    }
+  }
 }

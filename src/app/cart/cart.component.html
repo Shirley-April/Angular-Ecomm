@@ -17,5 +17,5 @@
     <h3>{{ item.price }}</h3>
   </div>
 
-  <div class="delete material-icons">delete</div>
+  <div class="delete material-icons" (click)="removeItem(item.id)">delete</div>
 </div>

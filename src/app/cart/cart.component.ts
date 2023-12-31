@@ -14,4 +14,8 @@ export class CartComponent {
 
   cartItems = this.cartService.getCartItems();
 
+  removeItem(id: number) {
+    this.cartService.removeItem(id)
+  }
+
 }
