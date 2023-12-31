@@ -1,0 +1,22 @@
+.main{
+    border-bottom: 1px solid black;
+    margin-bottom: 40px
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.right-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.item{
+    padding-right: 25px;
+}
