@@ -1,21 +1,52 @@
 <h2>My Cart</h2>
-<div class="container" *ngFor="let item of cartItems">
-  <div class="img"></div>
 
-  <div class="description">
-    <h3>{{ item.name }} {{ item.description }}</h3>
+<div class="empty" *ngIf="cartItems.length === 0">
+  <img src="/assets/products/cart-empty-2.svg" />
+  <h3>Your Cart is empty</h3>
+  <button class="btn-shop" [routerLink]="['/']">Start Shopping</button>
+</div>
+<div class="cart" *ngIf="cartItems.length >= 1">
+  <div>
+    <div class="container" *ngFor="let item of cartItems">
+      <div class="img"><img src="{{ item.image }}" /></div>
+
+      <div class="description">
+        <h3>{{ item.name }} {{ item.description }}</h3>
+      </div>
+
+      <div class="quantity">
+        <div (click)="decreaseQuantity(item.id)">-</div>
+        <div>{{ item.quantity }}</div>
+        <div (click)="addQuantity(item)">+</div>
+      </div>
+
+      <div class="price">
+        <h3>{{ item.price }}</h3>
+      </div>
+
+      <div class="delete material-icons" (click)="removeItem(item.id)">
+        delete
+      </div>
+    </div>
   </div>
 
-  <div class="quantity">
-    <div (click)="decreaseQuantity(item.id)">-</div>
-    <div>{{ item.quantity }}</div>
-    <div (click)="addQuantity(item.id)">+</div>
+  <!-- Order summary -->
+  <div class="summary">
+    <div class="summary-header">
+      <h4>Order Summary:</h4>
+      <p>3 Items</p>
+    </div>
 
+    <div class="items-total">
+      <p>Items total</p>
+      <h3>{{ cartTotal }}</h3>
+    </div>
+
+    <div class="summary-footer">
+      <p>Total</p>
+      <h2>{{ cartTotal }}</h2>
+    </div>
+
+    <button class="btn-summary">Proceed to Checkout</button>
   </div>
-
-  <div class="price">
-    <h3>{{ item.price }}</h3>
-  </div>
-
-  <div class="delete material-icons" (click)="removeItem(item.id)">delete</div>
 </div>
