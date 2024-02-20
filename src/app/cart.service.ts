@@ -13,22 +13,16 @@ export class CartService {
     return this.items;
   }
 
-  calculateTotalPrice = (): string => {
+  calculateTotalPrice() {
     let totalPrice = 0;
 
-    const convertPriceToNumber = (price: string): number => {
-      return parseFloat(price.replace('$', ''));
-    };
-
-    // Iterate through the products and add their prices
-    this.items.forEach((product) => {
-      const productPrice = convertPriceToNumber(product.price);
-      const productQuantity = product.quantity || 1; // Assuming a quantity of 1 if not specified
-      totalPrice += productPrice * productQuantity;
-    });
-
-    return totalPrice.toFixed(2)
-  };
+    for (const item of this.items) {
+      totalPrice += item.price * (item.quantity || 1); // Default quantity to 1 if not set
+    }
+    console.log(totalPrice);
+    
+    return totalPrice;
+  }
 
   addToCart(product: Product) {
     const item = this.items.find((item) => item.id === product.id);
