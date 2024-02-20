@@ -15,7 +15,19 @@ export class CartComponent {
   constructor(private cartService: CartService) {}
 
   cartItems = this.cartService.getCartItems();
-  cartTotal = this.cartService.calculateTotalPrice();
+
+  total = this.cartService.calculateTotalPrice()
+
+
+  totalPrice: number = 0;
+
+  ngOnInit() {
+    this.calculateTotalPrice();
+  }
+
+  calculateTotalPrice() {
+    this.totalPrice = this.cartService.calculateTotalPrice();
+  }
 
   removeItem(id: number) {
     this.cartService.removeItem(id);

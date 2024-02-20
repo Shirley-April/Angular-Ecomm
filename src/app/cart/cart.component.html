@@ -39,14 +39,14 @@
 
     <div class="items-total">
       <p>Items total</p>
-      <h3>{{ cartTotal }}</h3>
+      <h3>{{ totalPrice }}</h3>
     </div>
 
     <div class="summary-footer">
       <p>Total</p>
-      <h2>{{ cartTotal }}</h2>
+      <h2>{{ totalPrice }}</h2>
     </div>
 
-    <button class="btn-summary">Proceed to Checkout</button>
+    <button class="btn-summary" [routerLink]="['/checkout']">Proceed to Checkout</button>
   </div>
 </div>
