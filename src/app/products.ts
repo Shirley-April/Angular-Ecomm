@@ -11,7 +11,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Laptop',
+    name: 'Foundations Matte Flip Flop',
     price: '$999.99',
     description: 'Powerful laptop with high-performance features.',
     reviews: 4.5,
@@ -19,15 +19,15 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: 'Smartphone',
+    name: 'Nike Air Force 1 NDESTRUKT',
     price: '$599.99',
     description: 'The latest smartphone with advanced camera technology.',
     reviews: 3.2,
-    image: "/assets/products/product_10.jpg",
+    image: '/assets/products/product_10.jpg',
   },
   {
     id: 3,
-    name: 'Headphones',
+    name: 'Gazelle Vintage low-top sneakers',
     price: '$129.99',
     description: 'Wireless headphones with noise-canceling capabilities.',
     reviews: 2.8,
@@ -35,7 +35,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: 'Smartwatch',
+    name: 'Jordan Delta',
     price: '$199.99',
     description: 'Fitness tracking smartwatch with a stylish design.',
     reviews: 3.6,
@@ -43,7 +43,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: 'Camera',
+    name: 'Rod Laver low-top sneakers',
     price: '$799.99',
     description: 'Professional-grade camera for photography enthusiasts.',
     reviews: 5.0,
@@ -51,7 +51,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: 'Gaming Console',
+    name: 'Air Jordan XXXV PF',
     price: '$449.99',
     description: 'Next-gen gaming console with immersive gaming experiences.',
     reviews: 4.4,
@@ -59,7 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: 'Tablet',
+    name: 'Zoom Freak 2',
     price: '$299.99',
     description:
       'Compact tablet with a high-resolution display for multimedia.',
@@ -68,7 +68,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'Wireless Speaker',
+    name: 'Boston Soft Footbed Sandal',
     price: '$79.99',
     description: 'Portable wireless speaker with impressive audio quality.',
     reviews: 1.8,
@@ -85,7 +85,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: 'External Hard Drive',
+    name: 'Arizona Soft Footbed Sandal',
     price: '$119.99',
     description: 'High-capacity external hard drive for data storage needs.',
     reviews: 4.0,
